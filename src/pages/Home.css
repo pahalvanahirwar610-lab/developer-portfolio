@@ -1,0 +1,368 @@
+
+/* =========================================
+   HOME PAGE - MODERN DARK PORTFOLIO
+========================================= */
+
+/* Main Layout */
+
+.home-page {
+  min-height: calc(100vh - 76px);
+  width: 100%;
+  overflow-x: clip;
+  background:
+    radial-gradient(
+      circle at 75% 45%,
+      rgba(124, 58, 237, 0.08),
+      transparent 35%
+    ),
+    #0b1120;
+}
+
+/* Hero Section */
+
+.hero {
+  max-width: 1200px;
+  min-height: calc(100vh - 76px);
+  margin: 0 auto;
+  padding: 80px 24px;
+
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Hero Content */
+
+.hero-content {
+  min-width: 0;
+  animation: fadeInUp 0.8s ease both;
+}
+
+.hero-greeting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #22d3ee;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #22d3ee;
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
+}
+
+/* Main Heading */
+
+.hero h1 {
+  color: #f8fafc;
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #a78bfa;
+}
+
+/* Developer Title */
+
+.hero h2 {
+  color: #cbd5e1;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* Description */
+
+.hero-description {
+  color: #94a3b8;
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 580px;
+}
+
+/* Action Buttons */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px 24px;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.primary-btn {
+  color: #ffffff;
+  background: #7c3aed;
+  border: 1px solid #7c3aed;
+}
+
+.primary-btn:hover {
+  background: #6d28d9;
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  color: #f8fafc;
+  background: transparent;
+  border: 1px solid #475569;
+}
+
+.secondary-btn:hover {
+  border-color: #a78bfa;
+  background: rgba(139, 92, 246, 0.08);
+  transform: translateY(-3px);
+}
+
+/* Social Icons */
+
+.hero-socials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.hero-socials a {
+  width: 44px;
+  height: 44px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #94a3b8;
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.hero-socials a:hover {
+  color: #a78bfa;
+  border-color: #8b5cf6;
+  transform: translateY(-4px);
+}
+
+/* Right Side Visual */
+
+.hero-visual {
+  min-width: 0;
+  animation: fadeInUp 1s ease 0.2s both;
+}
+
+/* Code Editor Card */
+
+.code-window {
+  width: 100%;
+  padding: 24px;
+
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 16px;
+
+  box-shadow: 0 20px 80px rgba(124, 58, 237, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.code-window:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 90px rgba(124, 58, 237, 0.25);
+}
+
+/* Window Control Dots */
+
+.window-dots {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.window-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fb7185;
+}
+
+.window-dots span:nth-child(2) {
+  background: #fbbf24;
+}
+
+.window-dots span:nth-child(3) {
+  background: #34d399;
+}
+
+/* File Label */
+
+.code-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #64748b;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+/* Code Content */
+
+.code-window pre {
+  max-width: 100%;
+  overflow-x: auto;
+
+  color: #67e8f9;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 14px;
+  line-height: 1.9;
+  tab-size: 2;
+}
+
+.code-window code {
+  font-family: inherit;
+}
+
+/* Entrance Animation */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet Responsive */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 70px 24px;
+  }
+
+  .hero-content {
+    max-width: 700px;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 650px;
+  }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 9vw, 46px);
+    letter-spacing: -1px;
+  }
+
+  .hero h2 {
+    font-size: 23px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .hero-greeting {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    padding: 13px 18px;
+    font-size: 13px;
+  }
+
+  .code-window {
+    padding: 18px;
+  }
+
+  .code-window pre {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .hero-socials a {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Reduced Motion Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content,
+  .hero-visual {
+    animation: none;
+  }
+
+  .primary-btn,
+  .secondary-btn,
+  .hero-socials a,
+  .code-window {
+    transition: none;
+  }
+}
